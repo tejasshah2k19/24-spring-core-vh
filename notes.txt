@@ -1,0 +1,19 @@
+com ->  controller,dao 
+
+controller -> UserController -> login() 
+
+dao -> UserDao -> addUser() 
+
+spring? 
+
+Spring container ->
+IoC container ->  
+	interface 
+		1) BeanFactory 	
+		2) ApplicationContext -> BeanFactory 
+		
+		
+ApplicationContext 
+		ClassPathXmlApplicationContext 
+		****WebXmlAppliactionContext 	
+		
