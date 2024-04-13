@@ -79,12 +79,21 @@ spring -> ioc -> X class -> memory allocation ->
 					<bean class="" /> 
 
 
+--------------------------------------------------------------------
+
+DI -> depe. injection 
 
 
+dependency -> 
+			StudentDao 
+					AddressDao 
 
+	1) setter injection -> optional 
+	2) constructor injection -> compl.  
 
+scope="singleton"
 
-
+scope="prototype"
 
 
 

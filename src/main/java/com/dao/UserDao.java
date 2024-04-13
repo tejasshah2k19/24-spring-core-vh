@@ -17,5 +17,7 @@ public class UserDao {
 		this.userName = userName;
 	}
 	
-	
+	public void preProcess() {
+		System.out.println("UserDao::preProcess()");
+	}
 }

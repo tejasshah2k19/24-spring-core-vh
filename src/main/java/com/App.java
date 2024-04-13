@@ -27,7 +27,9 @@ public class App {
 //		
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-
+		System.out.println(context);
+		
+		
 		UserController uc1 = context.getBean("userController", UserController.class);
 		UserController uc2 = context.getBean("userController", UserController.class);
 		UserController uc3 = context.getBean("userController", UserController.class);
@@ -39,7 +41,7 @@ public class App {
 		System.out.println(uc4);
 		//
 
-		UserDao userDao = context.getBean("userDao", UserDao.class);
+		UserDao userDao = context.getBean("userDao",UserDao.class);
 		System.out.println(userDao.getUserName());// null
 
 		// StudentDao->AddressDao ->

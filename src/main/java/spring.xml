@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" 
+	default-init-method="preProcess"
+	default-destroy-method="destroy"
+	>
 	
 
-	<bean class="com.controller.UserController" id="userController"></bean>
+	<bean class="com.controller.UserController" id="userController"  init-method="preProcess" ></bean>
 	<bean class="com.dao.UserDao" id="userDao">
 		<property name="userName" value="root"></property>
 	</bean>
@@ -15,11 +18,12 @@
 		<property name="country" value="india"></property>
 	</bean>
 	
-	<bean class="com.dao.StudentDao" id="studentDao">
+	<bean class="com.dao.StudentDao" id="studentDao"  >
 		<property name="firstName" value="rock"></property>
 		<property name="age" value="33"></property>
-		<property name="address" ref="addressDao"></property>
+		<!-- <property name="address" ref="addressDao"></property> -->
 		
+		<constructor-arg  ref="addressDao"></constructor-arg>
 	</bean>
 	
 	

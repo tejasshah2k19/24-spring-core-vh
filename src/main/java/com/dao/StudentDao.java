@@ -6,6 +6,10 @@ public class StudentDao {
 	int age;
 	AddressDao address;
 
+	public StudentDao(AddressDao a) {
+		address = a;
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}
