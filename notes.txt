@@ -65,6 +65,41 @@ java -> folder
 
 
 
+-------------------------------------------------------------------
+
+
+spring -> object-> ? 
+			IoC container -> 
+					ApplicationContext -> 
+							ClassPathXmlApplicationContext 
+							
+spring -> ioc -> X class -> memory allocation -> 
+	spring.xml 
+			<beans>
+					<bean class="" /> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

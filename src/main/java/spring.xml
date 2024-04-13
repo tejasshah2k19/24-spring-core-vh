@@ -5,5 +5,22 @@
 	
 
 	<bean class="com.controller.UserController" id="userController"></bean>
-	<bean class="com.dao.UserDao" id="userDao"></bean>
+	<bean class="com.dao.UserDao" id="userDao">
+		<property name="userName" value="root"></property>
+	</bean>
+	
+	<bean class="com.dao.AddressDao" id="addressDao">
+		<property name="addressLine" value="F33 Rajpath Line"></property>
+		<property name="city" value="ahmedabad"></property>
+		<property name="country" value="india"></property>
+	</bean>
+	
+	<bean class="com.dao.StudentDao" id="studentDao">
+		<property name="firstName" value="rock"></property>
+		<property name="age" value="33"></property>
+		<property name="address" ref="addressDao"></property>
+		
+	</bean>
+	
+	
 </beans>
